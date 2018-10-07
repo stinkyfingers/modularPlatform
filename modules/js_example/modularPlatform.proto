@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package server;
+
+// protoc -I . modularPlatform.proto --go_out=plugins=grpc:.
+
+service Platform {
+	rpc RegisterModule(Module) returns (Details) {}
+}
+
+message Module {
+	string name = 1;
+	string port = 2;
+}
+
+message Details {
+	string details = 1;
+}
