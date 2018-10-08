@@ -3,16 +3,16 @@ package main
 import (
 	"log"
 
-	"github.com/stinkyfingers/modularPlatform/server"
+	"github.com/stinkyfingers/modularPlatform/platform"
 )
 
 func main() {
-	modules, err := server.GetModulesFromConfig()
+	modules, err := platform.GetModulesFromConfig()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = server.RunModules(modules)
+	err = platform.RunModules(modules)
 	if err != nil {
 		log.Fatal(err)
 	}

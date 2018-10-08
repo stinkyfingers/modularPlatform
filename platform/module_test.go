@@ -9,7 +9,7 @@ import (
 func TestRunJSModule(t *testing.T) {
 	m := &Module{
 		Name:       "test_js_module",
-		Location:   filepath.Join(build.Default.GOPATH, "src", "github.com", "stinkyfingers", "netanal", "modules", "js_example", "client.js"),
+		Location:   filepath.Join(build.Default.GOPATH, "src", "github.com", "stinkyfingers", "modularPlatform", "modules", "js_example", "client.js"),
 		RunCommand: "node",
 		Port:       "10000",
 	}
@@ -23,7 +23,7 @@ func TestRunJSModule(t *testing.T) {
 func TestRunGoModule(t *testing.T) {
 	m := &Module{
 		Name:       "test_go_module",
-		Location:   filepath.Join(build.Default.GOPATH, "src", "github.com", "stinkyfingers", "netanal", "modules", "go_example", "cmd", "main.go"),
+		Location:   filepath.Join(build.Default.GOPATH, "src", "github.com", "stinkyfingers", "modularPlatform", "modules", "go_example", "cmd", "main.go"),
 		RunCommand: "go run",
 		Port:       "9999",
 	}
