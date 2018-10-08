@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package server;
+package platform;
 
 // protoc -I . modularPlatform.proto --go_out=plugins=grpc:.
 

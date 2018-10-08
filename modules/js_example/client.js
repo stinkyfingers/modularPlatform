@@ -10,7 +10,7 @@ var packageDefinition = protoLoader.loadSync(
      defaults: true,
      oneofs: true
     });
-var platform = grpc.loadPackageDefinition(packageDefinition).server;
+var platform = grpc.loadPackageDefinition(packageDefinition).platform;
 var client = new platform.Platform('localhost:10000',
                                        grpc.credentials.createInsecure());
 
